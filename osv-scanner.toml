@@ -1,0 +1,19 @@
+[[IgnoredVulns]]
+id = "GHSA-2mjp-6q6p-2qxm"
+reason = "undici uses Math.random() for multipart boundaries; this action only calls the GitHub API and does not send multipart form data to untrusted servers, so the boundary cannot be predicted or abused."
+
+[[IgnoredVulns]]
+id = "GHSA-4992-7rv2-5pvq"
+reason = "undici memory leak on repeated identical requests; this action is a short-lived CI process and cannot sustain enough traffic to exhibit the leak."
+
+[[IgnoredVulns]]
+id = "GHSA-g9mf-h72j-4rw9"
+reason = "undici forwards Proxy-Authorization on cross-origin redirects; this action does not configure proxy authentication and only talks to api.github.com, so the header is never set."
+
+[[IgnoredVulns]]
+id = "GHSA-v9p9-hfj2-hcw8"
+reason = "undici sends Cookie headers across origins on redirects; this action only contacts api.github.com and does not set untrusted cookies, so no sensitive cookie can leak."
+
+[[IgnoredVulns]]
+id = "GHSA-vrm6-8vpv-qv8q"
+reason = "undici HTTP/2 CONTINUATION flood DoS; this action only calls the trusted GitHub API endpoint, which is not an attacker-controlled server."
