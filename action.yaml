@@ -32,7 +32,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/step-security/pr-conventional-commits:v1.5.2@sha256:115e44e5b78ed430edac3ead0ad9c3a3ba664c5be24cf46f17d865957a444910' # v1.5.2
 branding:
   icon: "git-pull-request"
   color: "blue"
