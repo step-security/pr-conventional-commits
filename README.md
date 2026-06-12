@@ -193,15 +193,4 @@ docker build -t pr-conventional-commits-test .
 docker run --rm pr-conventional-commits-test npm test
 ```
 
-You can verify your changes by editing the title of your PR. The PR uses an action located in the root directory of the branch associated with your PR, and GitHub will automatically build the Docker container with your changes. 
-
-## Author
-
-👤 **YTanikin**
-
-- Website: https://medium.com/@ytanikin
-- Github: [@ytanikin](https://github.com/ytanikin)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/step-security/pr-conventional-commits/issues).
+You can verify your changes by editing the title of your PR. The PR uses an action located in the root directory of the branch associated with your PR, and GitHub will automatically build the Docker container with your changes.
