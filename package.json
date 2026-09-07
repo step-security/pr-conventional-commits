@@ -5,15 +5,15 @@
   "main": "index.js",
   "homepage": "https://github.com/step-security/pr-conventional-commits",
   "dependencies": {
-    "@actions/core": "^2.0.1",
-    "@actions/github": "^6.0.0",
-    "axios": "^1.17.0",
+    "@actions/core": "^2.0.3",
+    "@actions/github": "^8.0.1",
+    "axios": "^1.20.0",
     "conventional-commits-parser": "^3.2.4"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.38.4",
-    "jest": "^28.0.0",
-    "jest-when": "^3.6.0"
+    "@vercel/ncc": "^0.45.0",
+    "jest": "^30.0.0",
+    "jest-when": "^4.0.0"
   },
   "scripts": {
     "test": "jest",

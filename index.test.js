@@ -3,22 +3,26 @@ const { getOctokit, context } = require('@actions/github');
 const toConventionalChangelogFormat = require('conventional-commits-parser');
 
 jest.mock('@actions/core');
-jest.mock('@actions/github');
+jest.mock('@actions/github', () => ({
+    getOctokit: jest.fn(),
+    context: { payload: {}, repo: {} },
+}));
+jest.mock('axios');
 
 const myModule = require('./index');
 const utils = require('./utils');
 
+let logMock;
+let warnMock;
 beforeEach(() => {
     jest.resetAllMocks();
-});
-let logMock;
-beforeEach(() => {
-    logMock = jest.spyOn(console, 'log');
-    logMock.mockImplementation(() => {});
+    logMock = jest.spyOn(console, 'log').mockImplementation(() => {});
+    warnMock = jest.spyOn(console, 'warn').mockImplementation(() => {});
 });
 
 afterEach(() => {
     logMock.mockRestore();
+    warnMock.mockRestore();
 });
 
 describe('checkConventionalCommits', () => {
